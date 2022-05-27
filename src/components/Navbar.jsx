@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
+import { Link } from 'react-scroll';
 
 import logo from '../assets/bd0dcd79757a4c118f03b85b98481d3a.png';
 export const Navbar = () => {
@@ -7,16 +8,29 @@ export const Navbar = () => {
 
   const handleClick = () => setNav(!nav);
   return (
-    <nav className='w-full h-[80px] bg-green flex items-center justify-between text-white text-2xl px-4  '>
+    <nav className=' fixed w-full h-[80px] bg-green flex items-center justify-between text-white px-4  '>
       <div>
         <img className='w-20 ' src={logo} alt='meal-planner-logo' />
       </div>
       {/* Menu */}
 
       <ul className='hidden md:flex '>
-        <li>Home</li>
-        <li>BMI Calculator</li>
-        <li>Meal Planner</li>
+        <li>
+          <Link to='home' smooth={true} duration={500}>
+            HOME
+          </Link>
+        </li>
+        <li>
+          <Link to='bmi' smooth={true} duration={500}>
+            BMI CALCULATOR
+          </Link>
+        </li>
+
+        <li>
+          <Link to='planner' smooth={true} duration={500}>
+            MEAL PLANNER
+          </Link>
+        </li>
       </ul>
 
       {/* Hamburger */}
@@ -31,9 +45,22 @@ export const Navbar = () => {
             : 'absolute top-0 left-0 w-full h-screen bg-green flex flex-col justify-center items-center'
         }
       >
-        <li className='py-6 text-4xl'>Home</li>
-        <li className='py-6 text-4xl'>BMI Calculator</li>
-        <li className='py-6 text-4xl'>Meal Planner</li>
+        <li className='py-6 text-4xl'>
+          <Link onClick={handleClick} to='home' smooth={true} duration={500}>
+            HOME
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          <Link onClick={handleClick} to='bmi' smooth={true} duration={500}>
+            BMI CALCULATOR
+          </Link>
+        </li>
+
+        <li className='py-6 text-4xl'>
+          <Link onClick={handleClick} to='planner' smooth={true} duration={500}>
+            MEAL PLANNER
+          </Link>
+        </li>
       </ul>
     </nav>
   );
