@@ -21,8 +21,8 @@ export const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to='bmi' smooth={true} duration={500}>
-            BMI CALCULATOR
+          <Link to='bmr' smooth={true} duration={500}>
+            BMR CALCULATOR
           </Link>
         </li>
 
@@ -51,8 +51,8 @@ export const Navbar = () => {
           </Link>
         </li>
         <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='bmi' smooth={true} duration={500}>
-            BMI CALCULATOR
+          <Link onClick={handleClick} to='bmr' smooth={true} duration={500}>
+            BMR CALCULATOR
           </Link>
         </li>
 

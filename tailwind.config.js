@@ -1,7 +1,9 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: ['checked'],
+    },
     colors: {
       white: '#fafcfa',
       green: '#4fd62d',
@@ -9,5 +11,5 @@ module.exports = {
       dark: '#227000',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/custom-forms')],
 };

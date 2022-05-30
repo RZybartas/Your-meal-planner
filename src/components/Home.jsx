@@ -18,7 +18,7 @@ export const Home = () => {
         </div>
         <div className='flex flex-col items-center ml-5'>
           <img className='w-80 py-4  ' src={diet} alt='diet-img' />
-          <button className='text-purple font-bold group border-2 px-6 py-3 mt-4 flex items-center'>
+          <button className='text-purple font-bold group border-2 px-6 py-3 mt-1 flex items-center'>
             Take your plan
             <span className='group-hover:rotate-90 duration-300'>
               <HiArrowNarrowRight className='ml-3' />
