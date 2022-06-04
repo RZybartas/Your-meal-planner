@@ -3,6 +3,7 @@ import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
 import { Link } from 'react-scroll';
 
 import logo from '../assets/bd0dcd79757a4c118f03b85b98481d3a.png';
+
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
 

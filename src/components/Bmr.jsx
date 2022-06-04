@@ -98,7 +98,7 @@ export const Bmr = () => {
             onChange={(e) => setAge(e.target.value)}
           />
         </div>
-        <div className='flex justify-between'>
+        <div className='flex justify-between my-7'>
           <button
             className='bg-green text-white w-1/3 my-2 mx-3 py-3'
             onClick={handleClick}
@@ -113,7 +113,7 @@ export const Bmr = () => {
             Reset
           </button>
         </div>
-        <h2 className='text-dark font-bold flex justify-center my-3'>
+        <h2 className='text-dark font-bold flex justify-center '>
           BMR <span className='text-purple mx-3'>{calories}</span> Calories/day
         </h2>
 

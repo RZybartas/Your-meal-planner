@@ -29,10 +29,12 @@ export const MealPlanner = () => {
   };
 
   return (
-    <div name='planner' className='w-full h-screen flex  items-start'>
+    <div name='planner' className='w-full h-screen flex  items-center'>
       {/* Container */}
-      <div className='max-w-[1000px] mx-auto mt-[100px] text-center h-[200px] items-center'>
-        <h1 className='text-4xl font-bold text-dark'> Vegan Meal Planner</h1>
+      <div className='max-w-[1000px]  m-auto text-center   '>
+        <h1 className='text-4xl font-bold text-dark mt-[100px]'>
+          Vegan Meal Planner
+        </h1>
         <div>
           <label className='text-dark ' htmlFor='calories'>
             Enter your calories
@@ -46,6 +48,7 @@ export const MealPlanner = () => {
         </div>
         <div className=' flex flex-col  w-full justify-center items-center text-dark my-5 '>
           {/* Toggle */}
+          <h2 className='font-bold text-2xl mb-3'>Choose your plan for</h2>
           <label htmlFor='toggle-plan' className='flex items-center'>
             For day
             <input
@@ -63,7 +66,7 @@ export const MealPlanner = () => {
         >
           Get your plan
         </button>
-        <div className='max-w-[1000px] h-[600px] '>
+        <div className='max-w-[1000px] h-auto '>
           {meals && <DayMealList />}
           {weekPlan && <WeekMealList />}
         </div>

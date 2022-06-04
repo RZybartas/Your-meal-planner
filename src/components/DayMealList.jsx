@@ -10,7 +10,9 @@ export const DayMealList = () => {
     <>
       <section className='max-w-[1000px] mx-auto '>
         {/* Container */}
-        <h1 className='text-2xl text-dark text-center py-4'>Day meal plan</h1>
+        <h1 className='text-2xl font-bold text-dark text-center py-4'>
+          Day meal plan
+        </h1>
         <div className='flex flex-cols max-w-[360px] my-5 mx-auto md:flex-row'>
           <p className='text-dark font-bold ml-3 flex flex-col'>
             Calories <span className='text-purple'>{nutrients.calories}</span>{' '}

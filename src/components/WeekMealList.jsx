@@ -16,7 +16,9 @@ export const WeekMealList = () => {
               key={day}
               className='max-w-[1000px] text-dark border border-dark my-3 '
             >
-              <h1 className='text-2xl text-center py-4'>Day plan for {day}</h1>
+              <h1 className='text-2xl font-bold text-center py-4'>
+                Day plan for {day}
+              </h1>
               <div className='flex flex-cols max-w-[360px] my-5 mx-auto  md:flex-row'>
                 <p className='text-dark font-bold ml-3 flex flex-col'>
                   Calories
