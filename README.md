@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Project Vegan meal planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made using React.js, Redux-toolkit, Tailwind.css. I used spoonacular for API.
 
-## Available Scripts
+This application can be used to find relevant vegan recipes based on your daily or weekly caloric intake. If you don't know the amount of calories that you should be consuming daily - there is a BMR (Basal Metabolic Rate) calculator that can handle that for you.
 
-In the project directory, you can run:
+The BMR Calculator requires you to input 4 sets of information:
 
-### `npm start`
+1. Your sex.
+2. Your current weight.
+3. Your height.
+4. Your age.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When you click on 'Calculate' - the calculator takes these four inputs and applies the BMR formula to return the recommended daily caloric amount.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+When you click on 'Take your plan' - You must input the daily calory amount and choose if you'd like to receive a daily or a weekly meal plan.
 
-### `npm test`
+Once you've done that - click on 'Get your plan'.
+You should see your meal recommendations, as well as the amount of macro-nutrients (protein/carbohydrates/fat) that they provide. Under each meal you can see how many servings the particular recipe can provide, as well as the preparation time to complete them.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To see the recipe for any of the meals - click on 'Go to recipe' which will link you to the original site that provided it.
