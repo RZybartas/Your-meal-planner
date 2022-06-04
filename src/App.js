@@ -1,6 +1,7 @@
 import { Bmr } from './components/Bmr';
 import { Home } from './components/Home';
 import { Navbar } from './components/Navbar';
+import { MealPlanner } from './components/MealPlanner';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Home />
       <Bmr />
+      <MealPlanner />
     </div>
   );
 }

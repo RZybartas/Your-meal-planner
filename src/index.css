@@ -42,14 +42,22 @@
     cursor: pointer;
     box-shadow: 0 0 2px 0 #555;
   }
-}
+  /* toggle-gender */
+  #toggle-gender::after {
+    content: '';
+    @apply h-6 w-6 rounded-full bg-purple absolute left-0 -top-0.5 transform scale-110 transition duration-200;
+  }
 
-/* toggle */
-#toggle::after {
-  content: '';
-  @apply h-6 w-6 rounded-full bg-purple absolute left-0 -top-0.5 transform scale-110 transition duration-200;
-}
+  #toggle-gender:checked::after {
+    @apply transform scale-110 translate-x-6;
+  }
+  /* toggle-plan */
+  #toggle-plan::after {
+    content: '';
+    @apply h-6 w-6 rounded-full bg-purple absolute left-0 -top-0.5 transform scale-110 transition duration-200;
+  }
 
-#toggle:checked::after {
-  @apply transform scale-110 translate-x-6;
+  #toggle-plan:checked::after {
+    @apply transform scale-110 translate-x-6;
+  }
 }

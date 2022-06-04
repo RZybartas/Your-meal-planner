@@ -35,7 +35,11 @@ export const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10'>
-        {!nav ? <HiOutlineMenuAlt3 /> : <HiOutlineX />}
+        {!nav ? (
+          <HiOutlineMenuAlt3 className='text-2xl' />
+        ) : (
+          <HiOutlineX className='text-2xl' />
+        )}
       </div>
       {/* Mobile menu */}
       <ul

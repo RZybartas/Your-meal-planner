@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-scroll';
 
 export const Bmr = () => {
   const [gender, setGender] = useState(false);
@@ -6,10 +8,6 @@ export const Bmr = () => {
   const [height, setHeight] = useState(120);
   const [age, setAge] = useState(18);
   const [calories, setCalories] = useState(0);
-  const [carbs, setCarbs] = useState(0);
-  const [protein, setProtein] = useState(0);
-  const [fat, setFat] = useState(0);
-  console.log(carbs);
 
   const handleClick = () => {
     if (gender) {
@@ -30,14 +28,6 @@ export const Bmr = () => {
     setCalories(0);
   };
 
-  const handleMacros = () => {
-    if (calories) {
-      setCarbs(Math.round(calories / 2 / 4));
-      setProtein(Math.round(calories / 4 / 4));
-      setFat(Math.round(calories / 4 / 9));
-    }
-  };
-
   return (
     <div
       name='bmr'
@@ -46,15 +36,17 @@ export const Bmr = () => {
       <h1 className='text-2xl mt-8 text-dark font-bold md:text-3xl md:my-8'>
         Basal Metabolic Rate Calculator
       </h1>
+      {/* Container */}
       <div className='w-[300px] border-2 border-green mt-2 md:w-[600px]'>
+        {/* Bmr calculator */}
         <div className=' flex flex-col  w-full justify-center items-center text-dark '>
           <label className='my-2 font-bold' htmlFor='gender'>
             I am a
           </label>
-          <label htmlFor='toggle' className='flex items-center'>
+          <label htmlFor='toggle-gender' className='flex items-center'>
             Male
             <input
-              id='toggle'
+              id='toggle-gender'
               type='checkbox'
               onChange={() => setGender(!gender)}
               className='cursor-pointer h-6 w-12 rounded-full appearance-none bg-white border-2 border-green  transition duration-200 relative mx-4 -z-10 checked:bg-white'
@@ -108,7 +100,7 @@ export const Bmr = () => {
         </div>
         <div className='flex justify-between'>
           <button
-            className='bg-green text-white w-1/3 my-2 mx-3 py-2'
+            className='bg-green text-white w-1/3 my-2 mx-3 py-3'
             onClick={handleClick}
           >
             Calculate
@@ -121,32 +113,23 @@ export const Bmr = () => {
             Reset
           </button>
         </div>
-        <h2 className='text-purple font-bold flex justify-center my-3'>
-          BMR = {calories} Calories/day
+        <h2 className='text-dark font-bold flex justify-center my-3'>
+          BMR <span className='text-purple mx-3'>{calories}</span> Calories/day
         </h2>
-        <div className='flex flex-col  items-center text-dark font-bold md:flex-row md:justify-around'>
-          <p className='mt-1'>
-            Carbs
-            <span className='border-2 border-purple px-4 mx-2'>{carbs}</span>
-            gr
-          </p>
-          <p className='mt-1'>
-            Protein
-            <span className='border-2 border-purple px-4 mx-2'>{protein}</span>
-            gr
-          </p>
-          <p className='mt-1'>
-            Fat
-            <span className='border-2 border-purple px-4 mx-2'>{fat}</span>
-            gr
-          </p>
-        </div>
+
         <div className='flex justify-center'>
-          <button
-            className='bg-green text-white w-[150px] my-4 p-2  mx-auto flex flex-row'
-            onClick={handleMacros}
-          >
-            Calculate macros
+          <button className='my-4'>
+            <Link
+              to='planner'
+              className='text-purple font-bold group border-2 px-6 py-3 mt-1 flex flex-row items-center'
+              smooth={true}
+              duration={500}
+            >
+              Take your plan
+              <span className='group-hover:rotate-90 duration-300'>
+                <HiArrowNarrowRight className='ml-3' />
+              </span>
+            </Link>
           </button>
         </div>
       </div>
