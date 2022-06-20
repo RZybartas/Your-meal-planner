@@ -12,12 +12,9 @@ export const WeekMealList = () => {
         {/* Container */}
         {week &&
           Object.keys(week).map((day) => (
-            <div
-              key={day}
-              className='max-w-[1000px] text-dark border border-dark my-3 '
-            >
+            <div key={day} className='max-w-[1000px] text-dark  my-3 '>
               <h1 className='text-2xl font-bold text-center py-4'>
-                Day plan for {day}
+                Meal plan for {day}
               </h1>
               <div className='flex flex-cols max-w-[360px] my-5 mx-auto  md:flex-row'>
                 <p className='text-dark font-bold ml-3 flex flex-col'>
@@ -47,7 +44,7 @@ export const WeekMealList = () => {
                   gr
                 </p>
               </div>
-              <section className='grid grid-cols-1 mx-auto  gap-3  md:grid-cols-3 md:grid-flow-col'>
+              <section className='max-w-[1000px] mb-8 grid  grid-cols-1 gap-8 mx-3   items-center text-primary sm:grid-cols-2 md:grid-cols-3'>
                 {/* Week plan container */}
                 {week &&
                   week[day].meals.map((meal) => {

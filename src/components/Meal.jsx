@@ -15,9 +15,13 @@ export const Meal = ({ meal }) => {
   }, [meal.id]);
   return (
     <>
-      <div className=' max-w-[400px] text-dark'>
-        <img className='max-w-[250px] mx-auto' src={imageUrl} alt='recipe' />
-        <div className='h-auto mb-6'>
+      <div className=' h-[460px] text-dark border border-purple rounded-lg flex flex-col justify-around'>
+        <div className=''>
+          <img
+            className='max-w-[250px] mx-auto mt-2'
+            src={imageUrl}
+            alt={meal.title}
+          />
           <h1 className='my-2 font-bold text-2xl'>{meal.title}</h1>
           <p>
             Preparation time:
@@ -31,8 +35,13 @@ export const Meal = ({ meal }) => {
               {meal.servings} servings
             </span>
           </p>
+        </div>
 
-          <a className='bg-green text-white px-3 py-3  ' href={meal.sourceUrl}>
+        <div className=''>
+          <a
+            className='bg-green text-white px-3 py-3 mb-3  '
+            href={meal.sourceUrl}
+          >
             Go to recipe
           </a>
         </div>
